@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+  <title id="title">ZerOS feature orbit</title>
+  <desc id="desc">A central ZerOS emblem connects to four glass feature cards for apps, files, system insight and personal settings.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#030711"/><stop offset=".5" stop-color="#0a1e40"/><stop offset="1" stop-color="#040815"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#142d5b" stop-opacity=".95"/><stop offset="1" stop-color="#0a1630" stop-opacity=".96"/></linearGradient>
+    <linearGradient id="gem" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9f5ff"/><stop offset=".38" stop-color="#6bdcff"/><stop offset="1" stop-color="#2862ff"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="24"/></filter>
+    <style>
+      .eyebrow { font: 600 12px Inter, ui-sans-serif, system-ui, sans-serif; fill: #72dfff; letter-spacing: .16em; }
+      .title { font: 600 32px Inter, ui-sans-serif, system-ui, sans-serif; fill: #f3f8ff; }
+      .cardTitle { font: 600 20px Inter, ui-sans-serif, system-ui, sans-serif; fill: #f3f8ff; }
+      .copy { font: 400 15px Inter, ui-sans-serif, system-ui, sans-serif; fill: #a8bdd8; }
+      .line { fill: none; stroke: #64ddff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect width="1600" height="700" rx="38" fill="url(#bg)"/>
+  <circle cx="800" cy="370" r="260" fill="#2a74ff" opacity=".16" filter="url(#glow)"/>
+  <text x="80" y="80" class="eyebrow">ONE DESKTOP · MANY POSSIBILITIES</text>
+  <text x="80" y="130" class="title">Your server, arranged around the way you think.</text>
+
+  <path d="M510 330 C625 230 700 220 790 295 M1010 330 C930 230 850 220 810 295 M510 475 C635 555 705 540 790 435 M1010 475 C900 555 840 540 810 435" fill="none" stroke="#3ecfff" stroke-opacity=".52" stroke-width="2" stroke-dasharray="8 10"/>
+  <circle cx="800" cy="370" r="120" fill="#0a1733" stroke="#3d91db" stroke-width="2"/>
+  <path d="M800 272 L866 342 L842 456 L800 500 L758 456 L734 342 Z" fill="url(#gem)" opacity=".92"/>
+  <path d="M800 272 L800 500 M734 342 L800 372 L866 342 M758 456 L800 372 L842 456" fill="none" stroke="#e9f5ff" stroke-opacity=".8" stroke-width="3"/>
+  <text x="748" y="548" class="eyebrow">ZEROS</text>
+
+  <g transform="translate(80 210)"><rect width="430" height="145" rx="24" fill="url(#card)" stroke="#2d6097" stroke-width="2"/><circle cx="58" cy="55" r="25" fill="#153a76" stroke="#54dbff" stroke-width="2"/><path d="M46 43h24v24H46zM51 48h5v5h-5zM60 48h5v5h-5zM51 57h5v5h-5zM60 57h5v5h-5z" fill="none" stroke="#74e5ff" stroke-width="2"/><text x="105" y="54" class="cardTitle">Apps</text><text x="105" y="84" class="copy">A home for the services you choose.</text><text x="105" y="108" class="copy">Review, install and manage them safely.</text></g>
+  <g transform="translate(1090 210)"><rect width="430" height="145" rx="24" fill="url(#card)" stroke="#2d6097" stroke-width="2"/><circle cx="58" cy="55" r="25" fill="#153a76" stroke="#54dbff" stroke-width="2"/><path d="M42 50h32v23H42zM48 45h20v5H48z" fill="none" stroke="#74e5ff" stroke-width="2"/><text x="105" y="54" class="cardTitle">Files</text><text x="105" y="84" class="copy">A clear place for the things you keep.</text><text x="105" y="108" class="copy">Confined roots, transfers and recovery.</text></g>
+  <g transform="translate(80 480)"><rect width="430" height="145" rx="24" fill="url(#card)" stroke="#2d6097" stroke-width="2"/><circle cx="58" cy="55" r="25" fill="#153a76" stroke="#54dbff" stroke-width="2"/><path d="M40 65h12l7-22 9 34 8-20h13" class="line"/><text x="105" y="54" class="cardTitle">System insight</text><text x="105" y="84" class="copy">See what the host actually knows.</text><text x="105" y="108" class="copy">Health, metrics, jobs and storage.</text></g>
+  <g transform="translate(1090 480)"><rect width="430" height="145" rx="24" fill="url(#card)" stroke="#2d6097" stroke-width="2"/><circle cx="58" cy="55" r="25" fill="#153a76" stroke="#54dbff" stroke-width="2"/><path d="M46 47h25M46 56h25M46 65h16" class="line"/><text x="105" y="54" class="cardTitle">Your settings</text><text x="105" y="84" class="copy">Preferences that follow your account.</text><text x="105" y="108" class="copy">Themes, pins, shortcuts and media.</text></g>
+</svg>

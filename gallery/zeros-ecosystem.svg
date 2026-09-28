@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+  <title id="title">ZerOS ecosystem</title>
+  <desc id="desc">Three soft glass cards show the ZerOS ecosystem: apps, files, and live system insight.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#030711"/><stop offset=".52" stop-color="#0a1d3a"/><stop offset="1" stop-color="#071029"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#152c57" stop-opacity=".95"/><stop offset="1" stop-color="#0b1730" stop-opacity=".96"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7de8ff"/><stop offset="1" stop-color="#3470ff"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
+    <style>
+      .eyebrow { font: 600 12px Inter, ui-sans-serif, system-ui, sans-serif; fill: #72dfff; letter-spacing: .16em; }
+      .title { font: 600 32px Inter, ui-sans-serif, system-ui, sans-serif; fill: #f2f8ff; }
+      .cardTitle { font: 600 24px Inter, ui-sans-serif, system-ui, sans-serif; fill: #f2f8ff; }
+      .copy { font: 400 16px Inter, ui-sans-serif, system-ui, sans-serif; fill: #a9bdd8; }
+      .line { fill: none; stroke: #66dfff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect width="1600" height="620" rx="38" fill="url(#bg)"/>
+  <circle cx="1360" cy="50" r="260" fill="#246eff" opacity=".18" filter="url(#blur)"/>
+  <circle cx="220" cy="580" r="240" fill="#00d9ff" opacity=".1" filter="url(#blur)"/>
+  <text x="80" y="88" class="eyebrow">THE ZEROS EXPERIENCE</text>
+  <text x="80" y="140" class="title">Everything you care about, in one calm control room.</text>
+
+  <g transform="translate(80 220)">
+    <rect width="450" height="300" rx="28" fill="url(#card)" stroke="#2b5e9a" stroke-width="2"/>
+    <circle cx="66" cy="72" r="30" fill="#153b79" stroke="#4fdcff" stroke-width="2"/>
+    <rect x="52" y="57" width="28" height="28" rx="6" fill="none" class="line"/>
+    <path d="M58 69h16M66 61v16" class="line"/>
+    <text x="42" y="145" class="cardTitle">Apps that belong to you</text>
+    <text x="42" y="183" class="copy">Browse, review, install and manage</text>
+    <text x="42" y="208" class="copy">your services behind one gateway.</text>
+  </g>
+
+  <g transform="translate(575 220)">
+    <rect width="450" height="300" rx="28" fill="url(#card)" stroke="#2b5e9a" stroke-width="2"/>
+    <circle cx="66" cy="72" r="30" fill="#153b79" stroke="#4fdcff" stroke-width="2"/>
+    <path d="M48 66h36v28H48zM54 60h24v6H54z" class="line"/>
+    <text x="42" y="145" class="cardTitle">Files with a clear home</text>
+    <text x="42" y="183" class="copy">A confined, recoverable place for</text>
+    <text x="42" y="208" class="copy">the data that makes your server yours.</text>
+  </g>
+
+  <g transform="translate(1070 220)">
+    <rect width="450" height="300" rx="28" fill="url(#card)" stroke="#2b5e9a" stroke-width="2"/>
+    <circle cx="66" cy="72" r="30" fill="#153b79" stroke="#4fdcff" stroke-width="2"/>
+    <path d="M48 82h10l7-22 9 34 8-20h10" class="line"/>
+    <text x="42" y="145" class="cardTitle">Insight without the noise</text>
+    <text x="42" y="183" class="copy">Health, metrics and jobs that show</text>
+    <text x="42" y="208" class="copy">what the host really knows.</text>
+  </g>
+</svg>

@@ -17,7 +17,7 @@ Your own personal server, with a desktop you open in any browser.
 </p>
 
 <p align="center">
-  <img src="gallery/desktop.png" alt="ZerOS desktop showing the dashboard, pinned apps and navigation" width="100%" style="border-radius: 24px; border: 1px solid #23416c;" />
+  <img src="gallery/desktop-home.png" alt="ZerOS desktop showing the dashboard, pinned apps and navigation" width="100%" style="border-radius: 24px; border: 1px solid #23416c;" />
 </p>
 
 ## What is ZerOS?
@@ -75,12 +75,36 @@ and 5** and for **x86-64 mini PCs**. See the [installation guide](docs/installat
 
 ## Screenshots
 
-| | |
-| --- | --- |
-| <img src="gallery/store.png" alt="The app store" /> | <img src="gallery/files.png" alt="Files" /> |
-| **Store** | **Files** |
-| <img src="gallery/task-manager.png" alt="Task Manager" /> | <img src="gallery/login.png" alt="Sign-in" /> |
-| **Task Manager** | **Sign-in** |
+<table>
+  <tr>
+    <td width="50%" align="center"><img src="gallery/app-store.png" alt="The ZerOStore app store, with Immich in the spotlight" width="100%" /><br /><b>Store</b></td>
+    <td width="50%" align="center"><img src="gallery/applications.png" alt="Applications: system apps, running apps and stopped apps" width="100%" /><br /><b>Applications</b></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><img src="gallery/task-manager-overview.png" alt="Task Manager: live CPU, memory, network, disk and an NVIDIA RTX 3090 at work" width="100%" /><br /><b>Task Manager</b></td>
+    <td width="50%" align="center"><img src="gallery/files-home.png" alt="Files: the Home folder with its default folders and recent pictures" width="100%" /><br /><b>Files</b></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><img src="gallery/task-manager-apps.png" alt="Task Manager, Apps: installed apps with their state, usage and ZerOS sign-in" width="100%" /><br /><b>Installed apps</b></td>
+    <td width="50%" align="center"><img src="gallery/task-manager-storage.png" alt="Task Manager, Storage: every disk and volume, with mount and format actions" width="100%" /><br /><b>Storage</b></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><img src="gallery/applications-server.png" alt="Applications, Server: installed apps with their containers, ports and ZerOS sign-in" width="100%" /><br /><b>Server apps</b></td>
+    <td width="50%" align="center"><img src="gallery/settings-appearance.png" alt="Settings, Appearance: ten themes and display options" width="100%" /><br /><b>Themes</b></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><img src="gallery/settings-about.png" alt="Settings, About: the version of every part of this server" width="100%" /><br /><b>About</b></td>
+    <td width="50%" align="center"><img src="gallery/login.png" alt="Sign-in" width="100%" /><br /><b>Sign-in</b></td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="gallery/settings-styles.png" alt="Settings, Styles: twelve desktop styles to choose from" width="100%" style="border-radius: 24px;" />
+</p>
+
+<p align="center">
+  <img src="gallery/poster.png" alt="ZerOS: your server, your apps, one beautiful web desktop" width="100%" style="border-radius: 24px;" />
+</p>
 
 ## Updates and backups
 

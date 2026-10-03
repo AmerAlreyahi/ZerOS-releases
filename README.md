@@ -5,7 +5,7 @@
 
 Your own personal server, with a desktop you open in any browser.
 
-**Latest version: [see Releases](https://github.com/AmerZuher/ZerOS-releases/releases/latest)**
+**Latest version: [see Releases](https://github.com/AmerAlreyahi/ZerOS-releases/releases/latest)**
 </div>
 
 <p align="center">
@@ -39,7 +39,7 @@ This repository holds the ZerOS releases: the installer, the program and ready-t
 ### One command
 
 ```bash
-curl -fsSL https://github.com/AmerZuher/ZerOS-releases/releases/latest/download/install.sh | sudo sh
+curl -fsSL https://github.com/AmerAlreyahi/ZerOS-releases/releases/latest/download/install.sh | sudo sh
 ```
 
 The installer checks that the download is genuine before it changes anything. When it finishes, it
@@ -49,7 +49,7 @@ account.
 To see what it would change without changing anything:
 
 ```bash
-curl -fsSL https://github.com/AmerZuher/ZerOS-releases/releases/latest/download/install.sh | sudo sh -s -- --dry-run
+curl -fsSL https://github.com/AmerAlreyahi/ZerOS-releases/releases/latest/download/install.sh | sudo sh -s -- --dry-run
 ```
 
 ### Or flash an image
@@ -138,10 +138,10 @@ ZerOS is [MIT licensed](LICENSE.md). The photographers and projects it builds on
 
 ## About the creator
 
-ZerOS is created and maintained by [Amer Zuher Alreyahi](https://github.com/AmerZuher).
+ZerOS is created and maintained by [Amer Zuher Alreyahi](https://github.com/AmerAlreyahi).
 
 <p>
-  <a href="https://github.com/AmerZuher">GitHub</a> ·
+  <a href="https://github.com/AmerAlreyahi">GitHub</a> ·
   <a href="https://amer-alreyahi.vercel.app">Portfolio</a> ·
   <a href="https://www.linkedin.com/in/amer-zuher-alriyahi">LinkedIn</a>
 </p>

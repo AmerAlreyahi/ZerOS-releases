@@ -22,7 +22,7 @@ includes their licences and notices in `THIRD_PARTY_LICENSES.txt`.
 
 ## The app store
 
-The Store's catalog comes from [ZerOStore](https://github.com/AmerZuher/ZerOStore), which is built
+The Store's catalog comes from [ZerOStore](https://github.com/AmerAlreyahi/ZerOStore), which is built
 from the [CasaOS App Store](https://github.com/IceWhaleTech/CasaOS-AppStore) (Apache-2.0, IceWhale
 Technology) and [Umbrel's app store](https://github.com/getumbrel/umbrel-apps). ZerOS downloads it
 when you open the Store; nothing from it ships with ZerOS itself. See ZerOStore's own `NOTICE`

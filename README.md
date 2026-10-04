@@ -11,13 +11,14 @@ Your own personal server, with a desktop you open in any browser.
 <p align="center">
   <a href="#install">Install</a> ·
   <a href="#what-you-get">What you get</a> ·
+  <a href="#new-in-11">New in 1.1</a> ·
   <a href="#screenshots">Screenshots</a> ·
   <a href="#updates-and-backups">Updates and backups</a> ·
   <a href="#security">Security</a>
 </p>
 
 <p align="center">
-  <img src="gallery/desktop-home.png" alt="ZerOS desktop showing the dashboard, pinned apps and navigation" width="100%" style="border-radius: 24px; border: 1px solid #23416c;" />
+  <img src="gallery/desktop-home.jpg" alt="ZerOS desktop showing the clock, pinned apps and live server use" width="100%" style="border-radius: 24px; border: 1px solid #23416c;" />
 </p>
 
 ## What is ZerOS?
@@ -64,46 +65,66 @@ and 5** and for **x86-64 mini PCs**. See the [installation guide](docs/installat
 - **Apps:** browse a store of self-hosted apps, see what each one will be allowed to do before you
   install it, then start, stop, update or remove it in one click.
 - **Files:** upload, download, preview, organise and search your files, with a trash you can
-  restore from.
+  restore from. Photos, music, video and text open in their own windows.
 - **Task Manager:** live CPU, memory, storage, network and GPU use, per-app usage and history.
 - **Backups:** scheduled backups of your apps and folders, which you can check and restore.
 - **Remote access:** reach your server securely from anywhere through Tailscale, without opening
-  ports on your router.
-- **Your desktop, your way:** ten themes, twelve desktop styles, wallpapers and pinned apps.
+  ports on your router, at a secure `https://` address your browser trusts.
+- **Terminal and Wi-Fi:** a terminal on your server and Wi-Fi setup, right from the desktop.
+- **Your desktop, your way:** ten themes, twelve desktop styles, wallpapers and up to twelve pinned
+  apps.
 
 <p align="center"><img src="gallery/zeros-ecosystem.svg" alt="Apps, files and live system insight" width="100%" style="border-radius: 24px;" /></p>
+
+## New in 1.1
+
+<p align="center">
+  <img src="gallery/windows-editor-photos.jpg" alt="Text Editor and Photos open side by side as windows" width="100%" style="border-radius: 24px; border: 1px solid #23416c;" />
+</p>
+
+- **Real windows.** Photos, Player, Text Editor and Terminal open as windows you can move, resize,
+  snap to half the screen, minimize to the dock and keep open side by side. They are kept for your
+  account: a reload, or another device, brings them back.
+- **Nothing you type is lost.** Text Editor keeps unsaved text on your server until you save or
+  discard it, and never overwrites a file that changed meanwhile without asking.
+- **Docker Hub in the Store.** Install any Docker Official Image, reviewed like every other app.
+- **A secure address for the desktop.** On your tailnet, ZerOS opens at
+  `https://<your-server>.<tailnet>.ts.net`, with a certificate your browser trusts.
+
+<table>
+  <tr>
+    <td width="50%" align="center"><img src="gallery/windows-player.jpg" alt="Music and a video playing in two Player windows" width="100%" /><br /><b>Player windows</b></td>
+    <td width="50%" align="center"><img src="gallery/store-dockerhub.jpg" alt="The Store's Docker Hub tab with Docker Official Images" width="100%" /><br /><b>Docker Hub</b></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><img src="gallery/remote-access.jpg" alt="Remote Access: the desktop's and each app's secure address" width="100%" /><br /><b>Secure addresses</b></td>
+    <td width="50%" align="center"><img src="gallery/remote-access-devices.jpg" alt="Remote Access: the machines on your tailnet and who signs in without a password" width="100%" /><br /><b>Your tailnet</b></td>
+  </tr>
+</table>
 
 ## Screenshots
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="gallery/app-store.png" alt="The ZerOStore app store, with Immich in the spotlight" width="100%" /><br /><b>Store</b></td>
-    <td width="50%" align="center"><img src="gallery/applications.png" alt="Applications: system apps, running apps and stopped apps" width="100%" /><br /><b>Applications</b></td>
+    <td width="50%" align="center"><img src="gallery/app-store.jpg" alt="The ZerOStore app store, with Immich in the spotlight" width="100%" /><br /><b>Store</b></td>
+    <td width="50%" align="center"><img src="gallery/applications.jpg" alt="Applications: system apps and running apps" width="100%" /><br /><b>Applications</b></td>
   </tr>
   <tr>
-    <td width="50%" align="center"><img src="gallery/task-manager-overview.png" alt="Task Manager: live CPU, memory, network, disk and an NVIDIA RTX 3090 at work" width="100%" /><br /><b>Task Manager</b></td>
-    <td width="50%" align="center"><img src="gallery/files-home.png" alt="Files: the Home folder with its default folders and recent pictures" width="100%" /><br /><b>Files</b></td>
+    <td width="50%" align="center"><img src="gallery/task-manager-overview.jpg" alt="Task Manager: live CPU, memory, network, disk and an NVIDIA RTX 3090" width="100%" /><br /><b>Task Manager</b></td>
+    <td width="50%" align="center"><img src="gallery/files-home.jpg" alt="Files: the Home folder with its default folders" width="100%" /><br /><b>Files</b></td>
   </tr>
   <tr>
-    <td width="50%" align="center"><img src="gallery/task-manager-apps.png" alt="Task Manager, Apps: installed apps with their state, usage and ZerOS sign-in" width="100%" /><br /><b>Installed apps</b></td>
-    <td width="50%" align="center"><img src="gallery/task-manager-storage.png" alt="Task Manager, Storage: every disk and volume, with mount and format actions" width="100%" /><br /><b>Storage</b></td>
+    <td width="50%" align="center"><img src="gallery/applications-server.jpg" alt="Applications, Server: installed apps with their containers, ports and ZerOS sign-in" width="100%" /><br /><b>Server apps</b></td>
+    <td width="50%" align="center"><img src="gallery/task-manager-storage.jpg" alt="Task Manager, Storage: every disk and volume, with mount and format actions" width="100%" /><br /><b>Storage</b></td>
   </tr>
   <tr>
-    <td width="50%" align="center"><img src="gallery/applications-server.png" alt="Applications, Server: installed apps with their containers, ports and ZerOS sign-in" width="100%" /><br /><b>Server apps</b></td>
-    <td width="50%" align="center"><img src="gallery/settings-appearance.png" alt="Settings, Appearance: ten themes and display options" width="100%" /><br /><b>Themes</b></td>
-  </tr>
-  <tr>
-    <td width="50%" align="center"><img src="gallery/settings-about.png" alt="Settings, About: the version of every part of this server" width="100%" /><br /><b>About</b></td>
-    <td width="50%" align="center"><img src="gallery/login.png" alt="Sign-in" width="100%" /><br /><b>Sign-in</b></td>
+    <td width="50%" align="center"><img src="gallery/settings-appearance.jpg" alt="Settings, Appearance: ten themes and display options" width="100%" /><br /><b>Themes</b></td>
+    <td width="50%" align="center"><img src="gallery/login.jpg" alt="Sign-in" width="100%" /><br /><b>Sign-in</b></td>
   </tr>
 </table>
 
 <p align="center">
-  <img src="gallery/settings-styles.png" alt="Settings, Styles: twelve desktop styles to choose from" width="100%" style="border-radius: 24px;" />
-</p>
-
-<p align="center">
-  <img src="gallery/poster.png" alt="ZerOS: your server, your apps, one beautiful web desktop" width="100%" style="border-radius: 24px;" />
+  <img src="gallery/settings-styles.jpg" alt="Settings, Styles: twelve desktop styles to choose from" width="100%" style="border-radius: 24px;" />
 </p>
 
 ## Updates and backups
@@ -133,7 +154,8 @@ in each version is in the [changelog](CHANGELOG.md).
 
 ## Licence and credits
 
-ZerOS is [MIT licensed](LICENSE.md). The photographers and projects it builds on are credited in
+ZerOS is free to install and use; its source code is not public. The terms are in
+[LICENSE.md](LICENSE.md). The photographers and projects it builds on are credited in
 [CREDITS.md](CREDITS.md).
 
 ## About the creator

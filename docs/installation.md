@@ -17,7 +17,7 @@ flash a ready-made image onto a Raspberry Pi or a mini PC.
 ### Install
 
 ```bash
-curl -fsSL https://github.com/AmerZuher/ZerOS-releases/releases/latest/download/install.sh | sudo sh
+curl -fsSL https://github.com/AmerAlreyahi/ZerOS-releases/releases/latest/download/install.sh | sudo sh
 ```
 
 The installer downloads ZerOS for your machine, checks that it's genuine, installs Docker if you
@@ -31,13 +31,13 @@ that token.
 To see what the installer would change, without changing anything:
 
 ```bash
-curl -fsSL https://github.com/AmerZuher/ZerOS-releases/releases/latest/download/install.sh | sudo sh -s -- --dry-run
+curl -fsSL https://github.com/AmerAlreyahi/ZerOS-releases/releases/latest/download/install.sh | sudo sh -s -- --dry-run
 ```
 
 To install a specific version instead of the newest one:
 
 ```bash
-curl -fsSL https://github.com/AmerZuher/ZerOS-releases/releases/latest/download/install.sh | sudo sh -s -- --version 1.0.0
+curl -fsSL https://github.com/AmerAlreyahi/ZerOS-releases/releases/latest/download/install.sh | sudo sh -s -- --version 1.0.0
 ```
 
 Running the installer again on a working server changes nothing, so it's safe to repeat.

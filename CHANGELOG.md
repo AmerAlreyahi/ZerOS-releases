@@ -25,7 +25,7 @@ unless noted otherwise.
 
 ### Apps and Store
 
-- ZerOStore: a single catalog (`AmerZuher/ZerOStore`) built from the CasaOS App Store and Umbrel's
+- ZerOStore: a single catalog (`AmerAlreyahi/ZerOStore`) built from the CasaOS App Store and Umbrel's
   app store, with compatibility notes and generated per-app passwords. Browse, review a Compose
   change, install, and manage installed apps' lifecycle (start, stop, restart, logs, remove).
 - Custom apps from an uploaded Compose file or a project archive the server builds.

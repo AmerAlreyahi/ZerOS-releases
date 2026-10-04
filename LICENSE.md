@@ -1,21 +1,28 @@
-# MIT License
+# ZerOS licence
 
-Copyright (c) 2026 Amer Zuher Alreyahi
+Copyright (c) 2026 Amer Zuher Alreyahi. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ZerOS is free to download, install and use. Its source code is not public.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+**You may**
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- install and use ZerOS, at no charge, on as many of your own machines as you like, at home or at
+  work;
+- share the unchanged release files, or a link to this repository.
+
+**You may not**
+
+- sell ZerOS, or charge for copies of it;
+- change, decompile or reverse engineer it, except where the law allows that whatever this licence
+  says;
+- remove or change its copyright notices.
+
+**Other people's work inside ZerOS** keeps its own licence. Each release lists those licences and
+notices in `THIRD_PARTY_LICENSES.txt`, and [CREDITS.md](CREDITS.md) names the rest. Nothing here
+limits the rights those licences give you.
+
+**No warranty.** ZerOS is provided "as is", without warranty of any kind, express or implied. The
+author is not liable for any claim, damages or other liability arising from using it.
+
+**Earlier versions.** ZerOS 1.1.1 and every version before it were published under the MIT licence
+and stay under it.

@@ -127,6 +127,10 @@ and 5** and for **x86-64 mini PCs**. See the [installation guide](docs/installat
   <img src="gallery/settings-styles.jpg" alt="Settings, Styles: twelve desktop styles to choose from" width="100%" style="border-radius: 24px;" />
 </p>
 
+<p align="center">
+  <img src="gallery/poster.png" alt="ZerOS: your server, your apps, one beautiful web desktop" width="100%" style="border-radius: 24px;" />
+</p>
+
 ## Updates and backups
 
 **Updates:** Settings → Maintenance updates ZerOS, your system and your apps. Every update is

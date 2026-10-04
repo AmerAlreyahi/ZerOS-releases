@@ -3,18 +3,21 @@
 
 # ZerOS
 
-Your own personal server, with a desktop you open in any browser.
+Your own personal server, with a real desktop you open in any browser.<br />
+Your photos, files, media and passwords on your hardware: private, backed up, and yours.
 
 **Latest version: [see Releases](https://github.com/AmerAlreyahi/ZerOS-releases/releases/latest)**
 </div>
 
 <p align="center">
+  <a href="docs/why-zeros.md"><b>Why ZerOS</b></a> ·
   <a href="#install">Install</a> ·
-  <a href="#what-you-get">What you get</a> ·
+  <a href="docs/features.md">Features</a> ·
   <a href="#new-in-11">New in 1.1</a> ·
   <a href="#screenshots">Screenshots</a> ·
-  <a href="#updates-and-backups">Updates and backups</a> ·
-  <a href="#security">Security</a>
+  <a href="docs/trust.md">Why you can trust it</a> ·
+  <a href="docs/privacy.md">Privacy</a> ·
+  <a href="docs/faq.md">FAQ</a>
 </p>
 
 <p align="center">
@@ -23,11 +26,32 @@ Your own personal server, with a desktop you open in any browser.
 
 ## What is ZerOS?
 
-ZerOS turns a Linux machine (a mini PC, a Raspberry Pi or an old computer) into a personal server.
-You manage everything from one desktop in your browser: your files, the apps you install, your
-server's health, storage, backups and settings, all behind one sign-in.
+ZerOS turns a Linux machine (a mini PC, a Raspberry Pi or an old computer) into a personal server,
+and gives it a desktop you open in any browser. Install Immich for your photos, Jellyfin for your
+films, Vaultwarden for your passwords or Home Assistant for your home in one click each, and manage
+all of it the way you use a computer: windows, apps, a file manager and a task manager, behind one
+sign-in. No terminal, no YAML.
 
 This repository holds the ZerOS releases: the installer, the program and ready-to-flash images.
+
+## Why ZerOS
+
+- **A real desktop, not a control panel.** Apps open in windows you move, resize, snap and keep
+  open side by side, and they come back after a reload or on another device.
+- **Safe by design.** The part you talk to runs without privileges and cannot touch Docker; only a
+  small agent is root, and it accepts a short list of fixed operations, never a command.
+  [How ZerOS protects you →](docs/trust.md)
+- **Every app is reviewed before it runs**, and anything that reaches beyond the app needs your yes.
+  Every app sits behind your ZerOS sign-in, and never sees your session.
+- **Updates that undo themselves.** ZerOS, your system and your apps update from one place; a signed
+  ZerOS release or an app that does not come back healthy is rolled back on its own.
+- **Backups, alerts and monitoring built in**: encrypted scheduled backups, alerts for full disks and
+  failing drives by email, ntfy, Gotify or Telegram, and live CPU, memory, disk and GPU use.
+- **Reach it from anywhere** through Tailscale, with secure `https://` addresses and nothing opened
+  on your router.
+- **Private.** No telemetry, no analytics, no account with us. [What leaves your server →](docs/privacy.md)
+
+[Read the full case for ZerOS →](docs/why-zeros.md)
 
 ## Install
 
@@ -143,21 +167,41 @@ schedule, keeping as many versions as you choose.
 **Is it running?** The [installation guide](docs/installation.md#checking-zeros) lists the
 commands that show ZerOS's state, version and logs on the server.
 
-## Security
+## Built to be trusted
 
-- Your server is reached on your home network at `http://zeros.local`, and from anywhere else
-  through Tailscale's encrypted connection.
-- Every release is signed, and ZerOS refuses to install or update from one that isn't.
-- Apps that ask for more access than usual (your hardware, your network, system folders) are
-  flagged, and need your yes before they're installed.
+ZerOS assumes any part of it that faces the network could one day have a bug, and makes sure no
+single bug can take over your machine.
 
-To report a security problem, see [SECURITY.md](SECURITY.md).
+| | |
+| --- | --- |
+| **Least privilege** | The API runs unprivileged in a read-only container with every Linux capability dropped and no Docker access. Only the host agent is root, and it runs fixed programs with fixed arguments, never a shell. |
+| **Apps can't see your session** | Every app sits behind ZerOS's gateway, which strips ZerOS's cookies and identity headers before a request reaches it. |
+| **Review before install** | Privileged containers, host access, devices and system mounts are spelled out and need your explicit yes; mounting ZerOS's own folders is refused outright. |
+| **Confined files** | Every file operation stays inside your Home, your drives and app data, and cannot follow a link out. |
+| **Signed releases** | ZerOS installs and updates only from releases signed with its key, and rolls back if a new version does not come up. |
+| **Accounts done right** | A one-time setup token, Argon2id passwords, strict cookies, CSRF protection, slowed-down guessing and an audit log. |
+| **No open ports** | Remote access goes through Tailscale's encrypted network; nothing is exposed to the internet. |
+
+[Read how ZerOS protects you, and what it does not do yet →](docs/trust.md) · To report a security
+problem, see [SECURITY.md](SECURITY.md).
+
+## Learn more
+
+| | |
+| --- | --- |
+| [Why ZerOS](docs/why-zeros.md) | What makes ZerOS different, and the questions to ask any web OS for your server |
+| [Features](docs/features.md) | Everything ZerOS can do, area by area |
+| [Why you can trust ZerOS](docs/trust.md) | Its security design, and its limits |
+| [Privacy](docs/privacy.md) | Every connection ZerOS makes, and what stays on your server |
+| [Installing ZerOS](docs/installation.md) | Install, flash an image, check, repair and remove |
+| [FAQ](docs/faq.md) | Questions people ask |
+| [Changelog](CHANGELOG.md) | What changed in each version |
 
 ## Good to know
 
-ZerOS is young. It has been tested on Ubuntu 24.04 and Debian 12 on x86-64 machines, but not yet on
-real hardware across real networks, and the Raspberry Pi image hasn't been booted yet. What changed
-in each version is in the [changelog](CHANGELOG.md).
+ZerOS is young and moves fast, with a tested release for every step. It runs on its creator's own
+server and is tested on Ubuntu 24.04 and Debian 12 on x86-64; the Raspberry Pi image has not yet
+been booted on a real Pi. What changed in each version is in the [changelog](CHANGELOG.md).
 
 ## Licence and credits
 

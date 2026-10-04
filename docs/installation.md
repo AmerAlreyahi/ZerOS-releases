@@ -1,6 +1,7 @@
 # Installing ZerOS
 
-> [Back to the README](../README.md)
+> [Home](../README.md) · [Why ZerOS](why-zeros.md) · [Features](features.md) ·
+> [Why you can trust it](trust.md) · [Privacy](privacy.md) · [FAQ](faq.md)
 
 There are two ways to install ZerOS: run the installer on a Linux machine you already have, or
 flash a ready-made image onto a Raspberry Pi or a mini PC.
@@ -25,6 +26,39 @@ don't have it, and starts ZerOS. It finishes by printing a **setup token**.
 
 Then open `http://<your-server>` in a browser (its name or IP address) and create your account with
 that token.
+
+### What the installer does
+
+Before it changes anything, it checks that this is a supported system on x86-64 or ARM64, that
+systemd runs it, that there is at least 1 GB of memory and about 10 GB free in `/var/lib`, that port
+80 is free and that CasaOS is not installed. If one check fails, it stops and says which, and
+nothing has been changed.
+
+Then it:
+
+- **checks the release's signature** against the key built into ZerOS, and refuses one that does not
+  match;
+- **installs what ZerOS uses, from your system's or the maker's own signed repositories**: Docker
+  (from Docker's repository, if you don't have it), Avahi (so `zeros.local` works), restic (for
+  backups) and smartmontools (for disk health), and NVIDIA's container toolkit if an NVIDIA driver is
+  present;
+- **creates two system users**, `zeros` and `zeros-gateway`, for the parts of ZerOS that run without
+  root;
+- **starts ZerOS**: the `zeros-agent` service, and the API and gateway containers.
+
+It does not install Tailscale (Remote Access offers that when you want it), does not change your
+network setup, and does not touch apps or containers it did not install. Every step compares what is
+there with what should be and changes only the difference, which is why running it again is safe.
+
+### Ports ZerOS uses
+
+| Port | What |
+| --- | --- |
+| 80 | The desktop, over HTTP on your network and HTTPS on your tailnet |
+| 443 | The desktop's secure address too, but only if nothing else uses 443 when ZerOS starts. An app such as a reverse proxy that already holds 443 keeps it |
+| Each app's own port | The apps you install, behind ZerOS sign-in |
+
+The API and the host agent listen only on the server itself, never on your network.
 
 ### Options
 
@@ -129,6 +163,19 @@ sudo zeros repair --dry-run
 
 In the desktop, Settings → About shows each part's version and whether it is connected, and Task
 Manager shows the server's live state.
+
+## If something doesn't work
+
+- **`http://zeros.local` does not open.** Use the server's IP address instead (`hostname -I` on the
+  server prints it). Some networks and older Windows versions do not resolve `.local` names.
+- **Lost the setup token?** Run `sudo zeros repair`: until the first account exists, it prints the
+  token again.
+- **The installer says port 80 is in use.** Something else serves a website on this machine. The
+  message names the command that shows what it is; stop or move it, then run the installer again.
+- **An app does not open.** Open Applications → Server: each app shows its state, and its logs are
+  one click away. Task Manager shows whether the server is short of memory or disk.
+- **Anything else.** [Checking ZerOS](#checking-zeros) lists the commands that show what ZerOS is
+  doing, and `sudo zeros repair` puts back whatever an installation has lost.
 
 ## Fixing or removing ZerOS
 

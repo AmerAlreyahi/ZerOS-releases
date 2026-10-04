@@ -87,6 +87,49 @@ Settings → Maintenance, or:
 sudo zeros update
 ```
 
+## Checking ZerOS
+
+Run these on the server.
+
+Is everything running? `zeros-agent` is the host agent; `zeros` runs the API and the app gateway
+as two Docker containers, `zeros-api-1` and `zeros-gateway-1`, which should both be "Up":
+
+```bash
+systemctl status zeros-agent zeros
+sudo docker ps --filter name=zeros
+```
+
+Which version is installed, and is a newer one out?
+
+```bash
+zeros version
+sudo zeros update --check
+```
+
+Does the desktop's server answer?
+
+```bash
+curl -s http://localhost/api/v1/health
+```
+
+The logs, when something is wrong:
+
+```bash
+journalctl -u zeros-agent -f
+sudo docker logs -f zeros-api-1
+sudo docker logs -f zeros-gateway-1
+```
+
+Is the installation intact? This lists what `sudo zeros repair` would put back, without changing
+anything:
+
+```bash
+sudo zeros repair --dry-run
+```
+
+In the desktop, Settings → About shows each part's version and whether it is connected, and Task
+Manager shows the server's live state.
+
 ## Fixing or removing ZerOS
 
 To put back anything ZerOS set up that has since been changed or removed:

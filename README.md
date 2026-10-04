@@ -140,6 +140,9 @@ previous version by itself.
 **Backups:** Settings → Backups copies your app data or any folder to another drive or folder, on a
 schedule, keeping as many versions as you choose.
 
+**Is it running?** The [installation guide](docs/installation.md#checking-zeros) lists the
+commands that show ZerOS's state, version and logs on the server.
+
 ## Security
 
 - Your server is reached on your home network at `http://zeros.local`, and from anywhere else

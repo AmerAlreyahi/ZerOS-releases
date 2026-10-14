@@ -1,5 +1,70 @@
 # Changelog
 
+## [1.1.7] — 2026-10-14
+
+### Fixes
+
+- Terminal's Ctrl+Shift+C copies selected text without triggering the browser shortcut. Plain Ctrl+C remains the shell interrupt; blocked clipboard operations appear in the status bar.
+- Publisher app icons keep their transparent artwork across Store, Applications and Task Manager. Only missing or failed icons get a tinted fallback tile; uploaded server images still fill the tile.
+- Desktop CPU, memory and health widgets open Task Manager's Overview; Essential's Storage widget opens Storage, regardless of the last page visited.
+
+### Enhancements
+
+- Optional Terminal Mouse mode copies selections and pastes on right-click, preserving the shell's bracketed paste behavior. It starts off and remembers the choice on this device.
+- Store spotlight starts on a random app, avoids repeating the last banner and keeps the same app through catalog reordering. Playback pauses and manual controls retain their behavior.
+
+## [1.1.6] — 2026-10-13
+
+- System apps load when opened, with shared loading and recovery states that keep window controls usable. Dock hover/focus warms the intended app; remembered pages and minimized app state survive. The complete initial JavaScript gzip graph is about 31% smaller; lab timing results vary by viewport.
+- Unhandled file drops are refused before React renders, including signed-out and connecting screens once the entry module executes. Files keeps its existing accepted-drop behavior.
+- Browser appearance migration checks retry when preference/media refresh cancels pending local reads. Accepted/declined choices remain authoritative; migration stays explicit and preserves local data until confirmed transfer succeeds.
+- A Text Editor that finishes loading in the background keeps the user's chosen foreground window instead of taking focus.
+- Browser regressions retain their original payload, security, destination and geometry assertions with deterministic migration fixtures and readiness checks.
+
+## [1.1.5] — 2026-10-13
+
+- Current host metrics retire immediately on agent loss and expire after the freshness interval, while measured history keeps real gaps. Reconnection refreshes the snapshot and late responses cannot replace newer live readings.
+- Shared header controls fit narrow phones and tablets; Essential pins and health remain reachable on short canvases through internal scrolling. Exposed desktop background opens the shared menu while covered widgets remain inert. Settled dock-gutter checks retain their exact assertions.
+- Minimized and phone-covered system apps pause disposable polling and Store rotation. Covered desktop subscriptions, clocks and decorative animation pause; restoration reads current truth. Durable jobs, live events and terminal connections remain active.
+- ZerOS updates check host package prerequisites before replacing files. Incomplete package operations refuse with recovery guidance while the current version keeps running; host repair is never performed implicitly. Setup preserves configured package holds and identifies incomplete required packages before apt changes.
+
+## [1.1.4] — 2026-10-13
+
+- Arcane receives a separate stable encryption key. Recipe updates preserve installed keys and deployment mode; file-backed or conflicting keys refuse replacement safely.
+- Custom Compose and uploaded apps accept explicit masked variables through review/install. Missing required substitutions refuse deployment; optional/defaulted expressions retain Compose semantics. Values remain private and are bound to the reviewed project.
+- Declared or explicitly selected IPv4/IPv6 loopback web interfaces remain private, retain their port bindings, and show access guidance without a browser launch link. Database ports are never guessed to be HTTP.
+- Coordinated ZerOStore fixes preserve Arcane 2.14.0 and its DinD recipe and correct PostgreSQL setup guidance to match fresh defaults, with an initialized-database warning.
+- Compatible generator and development dependency patches address the selected advisories; unresolved PM2 transitive advisories remain documented.
+
+## [1.1.3] — 2026-10-12
+
+### Data and account safety
+
+- A failed app install now cleans up containers and networks while preserving named
+  volumes, including data kept after an earlier uninstall. Deleting app data remains
+  an explicit removal choice. Failed cleanup keeps the project available for repair.
+- Notification requests completing after logout or an account change can no longer
+  restore the previous account's history, counts or errors. Newer live updates survive
+  older snapshots, and dismissal, read actions and pagination reconcile safely.
+
+### Validation
+
+- Alert API tests use an isolated HTTP refusal fixture, with explicit failure-code
+  and secret-redaction checks, instead of relying on a public ntfy hostname.
+- No database migration, dependency change, encryption-key rotation or port-binding
+  change. Existing UI geometry, metrics freshness and bundle work remain on the audit
+  roadmap; implementation evidence and validation limits are in docs/audits/.
+
+### Installer ISO
+
+- Releases also build a guided x86-64 UEFI installer ISO beside the existing disk
+  images and install script. Debian's installer handles network setup, disk selection
+  and explicit partition/erase confirmation; ZerOS's existing first boot creates the
+  account. Internet access is needed for host packages.
+- The ISO gets its own signed `installer.json` index. Existing `images.json` readers
+  and server updates keep their original contracts. Disposable UEFI/USB boot,
+  blank-disk installation and installed-system startup gate ISO publication.
+
 ## [1.1.2] — 2026-10-04
 
 Files works on folders and selections, and typing is never taken by a window.

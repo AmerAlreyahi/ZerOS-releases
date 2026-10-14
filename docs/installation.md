@@ -3,14 +3,15 @@
 > [Home](../README.md) · [Why ZerOS](why-zeros.md) · [Features](features.md) ·
 > [Why you can trust it](trust.md) · [Privacy](privacy.md) · [FAQ](faq.md)
 
-There are two ways to install ZerOS: run the installer on a Linux machine you already have, or
-flash a ready-made image onto a Raspberry Pi or a mini PC.
+Install ZerOS on an existing Linux host, use the guided x86-64 UEFI installer ISO for a fresh
+installation, or flash a ready-made disk image onto a Raspberry Pi or mini PC.
 
 ## Choose your installation path
 
 | Path | Hardware / OS | Disk and account setup |
 | --- | --- | --- |
 | `install.sh` on an existing host | x86-64 or ARM64 running a supported Linux distribution | Keeps the host OS and disk layout; installs services and dependencies; prints a setup token |
+| Guided x86-64 UEFI installer ISO | Intel/AMD 64-bit PC with UEFI and internet access | Boot USB, select a fresh target disk and confirm partitioning; claim the first account on the LAN |
 | x86-64 UEFI image | Intel/AMD 64-bit mini PC with UEFI | Writes a complete system onto the selected drive; claim the first account on the LAN |
 | Raspberry Pi ARM64 image | Raspberry Pi 4 or 5 | Writes a complete system onto the selected boot media; claim the first account on the LAN |
 
@@ -83,6 +84,10 @@ identity. Releases ship `release.json` and `release.json.sig`; the release manif
 and `zeros setup` and `zeros update` verify it against the public key built into ZerOS. The
 installer downloads and checksums the architecture-specific program, then runs `zeros setup`.
 This is distinct from manually checking an image before writing it.
+
+Current releases also publish separate signed `images.json` and `installer.json` indexes for the
+full disk images and installer ISO, with matching `.sig` files. The ISO index records its URL,
+SHA-256 and size; use the same release's `SHA256SUMS` to check the ISO before writing it.
 
 The 1.1.2 asset list does not include `images.json` or an image signature. Do not treat
 `release.json.sig` as a detached signature for an arbitrary `.img.xz`, and do not assume a
@@ -169,6 +174,28 @@ curl -fsSL https://github.com/AmerAlreyahi/ZerOS-releases/releases/latest/downlo
 ```
 
 Running the installer again on a working server changes nothing, so it's safe to repeat.
+
+## Guided x86-64 UEFI installer ISO
+
+Choose this for a fresh installation onto a PC's internal disk. Check the chosen release's assets
+for `zeros-<version>-x86-64-uefi.iso`; the published 1.1.6 release includes it. Download and
+[verify the ISO](#verify-downloads) before writing it to USB.
+
+1. Back up the USB and target disk. Writing the USB erases it; the installation can erase the
+   selected target disk when you confirm partitioning.
+2. Write the ISO to USB with an image writer, safely eject it, and boot its UEFI entry on the
+   target PC. Use wired Ethernet and internet access for Debian and Docker packages.
+3. Choose **Install ZerOS**. Debian's installer asks for language, keyboard, network, hostname,
+   target disk and explicit partition/erase confirmation. Check the target disk carefully.
+4. When installation finishes, remove the USB and boot the installed disk. ZerOS first boot uses
+   the bundled signed release; open the server's IP address in a browser, or its chosen hostname's
+   `.local` address if it resolves.
+5. On a trusted LAN, create the first account within 30 minutes of boot, without a setup token.
+   That account is also the SSH login. No default password ships and root login is disabled.
+
+For an existing Linux installation, use `install.sh`; for an existing ZerOS server, use Settings'
+update controls. The guided ISO installs a fresh system. A flashed `.img.xz` instead runs directly
+from the drive you wrote, as described below.
 
 ## Flash an image (Raspberry Pi 4/5, x86-64 mini PCs)
 

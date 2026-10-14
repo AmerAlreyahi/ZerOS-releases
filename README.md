@@ -60,6 +60,7 @@ This repository holds the ZerOS releases: the installer, the program and ready-t
 | Option | Use it for | What happens |
 | --- | --- | --- |
 | **Installer script (`install.sh`)** | An existing supported Linux host on x86-64 or ARM64 | Installs ZerOS and its dependencies on your current OS; finishes with a setup token |
+| **Guided x86-64 UEFI installer ISO** — `zeros-<version>-x86-64-uefi.iso` | A fresh installation on an Intel/AMD PC with UEFI | Boot the USB, choose the internal target disk and confirm partitioning; requires internet access |
 | **x86-64 UEFI image** — `zeros-<version>-x86-64-uefi.img.xz` | An Intel/AMD 64-bit mini PC with UEFI | Replaces the selected USB stick or disk with a complete bootable system; requires wired Ethernet and Secure Boot off |
 | **Raspberry Pi ARM64 image** — `zeros-<version>-raspberry-pi-arm64.img.xz` | Raspberry Pi 4 or 5 | Replaces the selected SD card or boot media with a complete bootable system; use Raspberry Pi Imager's **Use custom** option |
 
@@ -67,6 +68,8 @@ A `.img.xz` is a **compressed full disk image**, with the system's disk layout a
 already prepared. It is not an ISO installer: write it with an image writer, rather than copying
 the file onto a drive. Booting a flashed USB runs ZerOS from that USB; it does not automatically
 install ZerOS onto the PC's internal disk. Flashing erases the selected drive.
+
+For installation onto an internal disk from USB, use the [guided ISO installer](docs/installation.md#guided-x86-64-uefi-installer-iso).
 
 Choose an image that is actually attached to the release: 1.1.0 and 1.1.1 have no flashable images.
 See the [installation guide](docs/installation.md) for architecture selection, download

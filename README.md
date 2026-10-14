@@ -55,7 +55,24 @@ This repository holds the ZerOS releases: the installer, the program and ready-t
 
 ## Install
 
-### What you need
+### Choose an installation option
+
+| Option | Use it for | What happens |
+| --- | --- | --- |
+| **Installer script (`install.sh`)** | An existing supported Linux host on x86-64 or ARM64 | Installs ZerOS and its dependencies on your current OS; finishes with a setup token |
+| **x86-64 UEFI image** — `zeros-<version>-x86-64-uefi.img.xz` | An Intel/AMD 64-bit mini PC with UEFI | Replaces the selected USB stick or disk with a complete bootable system; requires wired Ethernet and Secure Boot off |
+| **Raspberry Pi ARM64 image** — `zeros-<version>-raspberry-pi-arm64.img.xz` | Raspberry Pi 4 or 5 | Replaces the selected SD card or boot media with a complete bootable system; use Raspberry Pi Imager's **Use custom** option |
+
+A `.img.xz` is a **compressed full disk image**, with the system's disk layout and boot files
+already prepared. It is not an ISO installer: write it with an image writer, rather than copying
+the file onto a drive. Booting a flashed USB runs ZerOS from that USB; it does not automatically
+install ZerOS onto the PC's internal disk. Flashing erases the selected drive.
+
+Choose an image that is actually attached to the release: 1.1.0 and 1.1.1 have no flashable images.
+See the [installation guide](docs/installation.md) for architecture selection, download
+verification, flashing and first boot.
+
+### What you need for the installer script
 
 - Debian 12 or 13, Ubuntu 22.04 or 24.04, or Raspberry Pi OS (64-bit), on a 64-bit PC or ARM board.
 - At least 1 GB of memory and 10 GB of free disk space.
@@ -79,8 +96,8 @@ curl -fsSL https://github.com/AmerAlreyahi/ZerOS-releases/releases/latest/downlo
 
 ### Or flash an image
 
-Each release also has images you write to an SD card, USB stick or disk, for the **Raspberry Pi 4
-and 5** and for **x86-64 mini PCs**. See the [installation guide](docs/installation.md).
+For the image options above, follow the [flashing and first-boot steps](docs/installation.md#flash-an-image-raspberry-pi-45-x86-64-mini-pcs). A flashed device is claimed from the local network
+within 30 minutes of boot, without the installer's setup token.
 
 ## What you get
 

@@ -178,7 +178,7 @@ Running the installer again on a working server changes nothing, so it's safe to
 ## Guided x86-64 UEFI installer ISO
 
 Choose this for a fresh installation onto a PC's internal disk. Check the chosen release's assets
-for `zeros-<version>-x86-64-uefi.iso`; the published 1.1.6 release includes it. Download and
+for `zeros-<version>-x86-64-uefi.iso`; the published 1.1.7 release includes it. Download and
 [verify the ISO](#verify-downloads) before writing it to USB.
 
 1. Back up the USB and target disk. Writing the USB erases it; the installation can erase the

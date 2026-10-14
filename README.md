@@ -6,7 +6,7 @@
 Your own personal server, with a real desktop you open in any browser.<br />
 Your photos, files, media and passwords on your hardware: private, backed up, and yours.
 
-**Latest version: [1.1.7](https://github.com/AmerAlreyahi/ZerOS-releases/releases/tag/v1.1.7)**
+**Latest version: [1.1.8](https://github.com/AmerAlreyahi/ZerOS-releases/releases/tag/v1.1.8)**
 </div>
 
 <p align="center">

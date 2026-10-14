@@ -5,9 +5,9 @@
 
 A tour of ZerOS, area by area. Everything here is in the current release.
 
-## Prepared for 1.1.8 — publication pending
+## New in 1.1.8
 
-The latest published release remains **1.1.7**. These changes are prepared locally for 1.1.8:
+[ZerOS 1.1.8](https://github.com/AmerAlreyahi/ZerOS-releases/releases/tag/v1.1.8) includes:
 
 - Player uses loaded video dimensions for its initial window shape. Portrait video stays fully visible, edges and corners resize reliably, and narrow control bars wrap. Manual sizing and fullscreen remain under your control.
 - Terminal selection follows the pointer through interface-size changes and window movement. Pinned icons have quieter borders on dark wallpapers, and system icons follow the selected accent regardless of their position.

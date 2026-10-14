@@ -5,6 +5,15 @@
 
 A tour of ZerOS, area by area. Everything here is in the current release.
 
+## Prepared for 1.1.8 — publication pending
+
+The latest published release remains **1.1.7**. These changes are prepared locally for 1.1.8:
+
+- Player uses loaded video dimensions for its initial window shape. Portrait video stays fully visible, edges and corners resize reliably, and narrow control bars wrap. Manual sizing and fullscreen remain under your control.
+- Terminal selection follows the pointer through interface-size changes and window movement. Pinned icons have quieter borders on dark wallpapers, and system icons follow the selected accent regardless of their position.
+- Task Manager history adds a readable measured summary and an optional time/value table. Missing intervals and unavailable readings remain explicit.
+- App installation reports a failed ownership change instead of opening app-data permissions. The installed host agent needs ownership privileges; existing data is left unchanged.
+
 ## The desktop
 
 ![The ZerOS desktop](../gallery/desktop-home.jpg)

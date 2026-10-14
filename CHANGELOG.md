@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.1.8] — 2026-10-14
+
+### Fixes
+
+- Terminal text selection follows the pointer at every interface size, including after moving, resizing or changing scale, without reconnecting the session.
+- Pinned app tiles have quieter borders on dark wallpapers. Files and Task Manager icons follow the selected theme accent regardless of their position.
+- Player's edges and corners resize above video controls. Loaded portrait, landscape and square video get a bounded initial window shape and remain fully visible; manual sizing and fullscreen survive, and narrow controls wrap.
+- App installation reports ownership failures without making app-data folders world-writable. Existing data permissions are preserved.
+
+### Enhancements
+
+- Task Manager history offers measured summaries and an expandable time/value table, with unavailable values and missing intervals shown explicitly.
+
+### Maintenance
+
+- Frontend pull requests check generated API types, typecheck, lint, production build and representative mocked browser flows. Release builds cache container layers and verified upstream installer downloads without removing final artifact gates.
+- A compatible js-yaml security patch updates development tooling; two other development dependency advisories remain documented.
+
 ## [1.1.7] — 2026-10-14
 
 ### Fixes

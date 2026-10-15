@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.9] — Unpublished
+
+- Returning to the current wallpaper while another image loads keeps one ready layer, preventing a duplicate flash and ignoring the cancelled image's late response.
+- Disk-image builds use a faster compression preset. Local full-image measurements reduced compression time by 51–55%, with Pi downloads about 9% larger and x86 downloads about 5% larger; hosted build savings remain unmeasured.
+
 ## [1.1.8] — 2026-10-14
 
 ### Fixes

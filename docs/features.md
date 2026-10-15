@@ -3,7 +3,12 @@
 > [Home](../README.md) · [Why ZerOS](why-zeros.md) · [Why you can trust it](trust.md) ·
 > [Privacy](privacy.md) · [Install](installation.md) · [FAQ](faq.md)
 
-A tour of ZerOS, area by area. Everything here is in the current release.
+A tour of ZerOS, area by area. The feature tour describes the current published release; prepared changes are marked below.
+
+## Prepared for 1.1.9 — unpublished
+
+Returning to the current wallpaper while another image loads keeps its existing visible layer,
+preventing a duplicate flash. This fix is prepared locally; 1.1.8 remains the latest published release.
 
 ## New in 1.1.8
 

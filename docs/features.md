@@ -15,7 +15,7 @@ Prepared locally; **1.1.8 remains the latest published release**:
 - The default browser favicon is a compact transparent 64px image; custom site icons still take precedence.
 - Returning to the current wallpaper while another image loads keeps its existing visible layer, preventing a duplicate flash.
 
-The coordinated catalog also has a locally prepared transparent Jellyfin icon correction; it has not been published.
+The coordinated catalog now serves the official transparent Jellyfin and Jellyfin NVIDIA icons; both public files were independently verified against the pinned upstream checksum.
 
 ## New in 1.1.8
 

@@ -18,7 +18,7 @@ for the creator’s public profile; the photo loads from `avatars.githubusercont
 These requests come from your browser, omit ZerOS credentials and the page referrer,
 and expose the usual network connection information to GitHub. The website link
 comes from the creator’s GitHub website field. If GitHub is unavailable, About says
-so and continues to show server information from your own server.
+so; the release information and guides remain available.
 
 ## Every connection ZerOS makes, and why
 

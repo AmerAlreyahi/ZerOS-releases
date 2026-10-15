@@ -235,6 +235,6 @@ ZerOS is created and maintained by [Amer Zuher Alreyahi](https://github.com/Amer
 
 <p>
   <a href="https://github.com/AmerAlreyahi">GitHub</a> ·
-  <a href="https://amer-alreyahi.vercel.app">Portfolio</a> ·
+  <a href="https://ameralreyahi.com">Portfolio</a> ·
   <a href="https://www.linkedin.com/in/amer-zuher-alriyahi">LinkedIn</a>
 </p>

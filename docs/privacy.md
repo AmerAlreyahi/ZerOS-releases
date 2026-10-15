@@ -10,6 +10,16 @@ or your apps is ever sent to the people who make ZerOS.
 The desktop itself loads nothing from the internet either: its fonts, icons and wallpapers ship
 with ZerOS, and pages such as Settings → About are read only from your server.
 
+## Prepared change for 1.1.9 — unpublished
+
+The paragraph above describes published 1.1.8. In the locally prepared 1.1.9,
+opening Settings → About or pressing **Refresh profile** asks `api.github.com`
+for the creator’s public profile; the photo loads from `avatars.githubusercontent.com`.
+These requests come from your browser, omit ZerOS credentials and the page referrer,
+and expose the usual network connection information to GitHub. The website link
+comes from the creator’s GitHub website field. If GitHub is unavailable, About says
+so and continues to show server information from your own server.
+
 ## Every connection ZerOS makes, and why
 
 A server does need the internet for a few things: to find updates, to download the apps you choose,

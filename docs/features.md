@@ -7,8 +7,14 @@ A tour of ZerOS, area by area. The feature tour describes the current published 
 
 ## Prepared for 1.1.9 — unpublished
 
-Returning to the current wallpaper while another image loads keeps its existing visible layer,
-preventing a duplicate flash. This fix is prepared locally; 1.1.8 remains the latest published release.
+Prepared locally; **1.1.8 remains the latest published release**:
+
+- Installed apps offer a separate, read-only Compose viewer for administrators; editing and redeployment remain future work.
+- App menus share the All Apps actions. Setup details use separate username, password and additional information fields, with an explicit empty state.
+- About adapts to restored and maximized app windows and reads the creator’s public profile, photo and website from GitHub. The visual design is still awaiting Amer’s approval.
+- Returning to the current wallpaper while another image loads keeps its existing visible layer, preventing a duplicate flash.
+
+The coordinated catalog also has a locally prepared transparent Jellyfin icon correction; it has not been published.
 
 ## New in 1.1.8
 

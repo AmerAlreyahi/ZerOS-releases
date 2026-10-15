@@ -4,7 +4,7 @@
 
 - App details show installed Compose YAML in a separate read-only viewer, with administrator permissions and audited access. Editing and redeployment remain separate future work.
 - App menus share the All Apps actions across desktop pins, Server, Task Manager and Custom apps. Setup details open separately with username, password and additional information fields, and an explicit empty state.
-- About presents ZerOS, the creator’s current public GitHub profile, useful guides and a local server summary in separate sections. The layout adapts to the app window. Opening About contacts GitHub; local server details remain available if GitHub is unavailable.
+- About presents ZerOS, the creator’s current public GitHub profile and useful guides, with version and licence in the sidebar. The layout adapts to the app window. Opening About contacts GitHub; release information and guides remain available if GitHub is unavailable.
 
 - Returning to the current wallpaper while another image loads keeps one ready layer, preventing a duplicate flash and ignoring the cancelled image's late response.
 - Disk-image builds use a faster compression preset. Local full-image measurements reduced compression time by 51–55%, with Pi downloads about 9% larger and x86 downloads about 5% larger; hosted build savings remain unmeasured.

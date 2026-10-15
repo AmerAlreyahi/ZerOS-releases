@@ -3,15 +3,16 @@
 > [Home](../README.md) · [Why ZerOS](why-zeros.md) · [Why you can trust it](trust.md) ·
 > [Privacy](privacy.md) · [Install](installation.md) · [FAQ](faq.md)
 
-A tour of ZerOS, area by area. The feature tour describes the current published release; prepared changes are marked below.
+A tour of the current published ZerOS release, area by area.
 
-## Prepared for 1.1.9 — unpublished
+## New in 1.1.9
 
-Prepared locally; **1.1.8 remains the latest published release**:
+[ZerOS 1.1.9](https://github.com/AmerAlreyahi/ZerOS-releases/releases/tag/v1.1.9) includes:
 
 - Installed apps offer a separate, read-only Compose viewer for administrators; editing and redeployment remain future work.
 - App menus share the All Apps actions. Setup details use separate username, password and additional information fields, with an explicit empty state.
-- About shows the ZerOS introduction, developer profile and guides, with version and licence in its sidebar. Its layout adapts to the app window. The profile, photo and website come from GitHub. The overall design remains under review.
+- App details have an icon/name header and aligned sections, and their styles load from every app entry point. Publisher setup notes render readable Markdown in app details and Store installation views.
+- About shows the ZerOS introduction, developer profile and guides, with version and licence in its sidebar. Its layout adapts to the app window. The profile, photo and website come from GitHub.
 - The default browser favicon is a compact transparent 64px image; custom site icons still take precedence.
 - Returning to the current wallpaper while another image loads keeps its existing visible layer, preventing a duplicate flash.
 
@@ -153,7 +154,7 @@ The coordinated catalog now serves the official transparent Jellyfin and Jellyfi
   not answer over Wi-Fi, ZerOS switches back by itself.
 - **Terminal**: a shell on your server, in a window, after confirming your password.
 - **Restart and shut down** the server from the desktop.
-- **Settings → About** shows the version of every part of ZerOS and whether it is connected.
+- **Settings → About** introduces ZerOS, its creator and useful guides, with the version and licence in its sidebar. The creator’s public profile, photo and website refresh from GitHub.
 
 ## Installation
 

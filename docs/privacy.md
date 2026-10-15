@@ -7,12 +7,7 @@ Your files, photos, passwords and settings stay on your server. ZerOS has **no t
 analytics, no crash reports, no advertising and no account with us**. Nothing about you, your files
 or your apps is ever sent to the people who make ZerOS.
 
-The desktop itself loads nothing from the internet either: its fonts, icons and wallpapers ship
-with ZerOS, and pages such as Settings → About are read only from your server.
-
-## Prepared change for 1.1.9 — unpublished
-
-The paragraph above describes published 1.1.8. In the locally prepared 1.1.9,
+The desktop's fonts, system icons and built-in wallpapers ship with ZerOS. In 1.1.9,
 opening Settings → About or pressing **Refresh profile** asks `api.github.com`
 for the creator’s public profile; the photo loads from `avatars.githubusercontent.com`.
 These requests come from your browser, omit ZerOS credentials and the page referrer,
@@ -27,6 +22,7 @@ and to reach you away from home. This is the complete list.
 
 | When | Where to | What for |
 | --- | --- | --- |
+| When you open About or refresh the creator profile | GitHub API and avatar service | Public creator profile and photo, without ZerOS credentials or page referrer |
 | Once a day, and when you press *Check for updates* | GitHub (`AmerAlreyahi/ZerOS-releases`) | Is there a newer, signed ZerOS release? |
 | Once a day, and when you press *Check for updates* | Your system's package mirrors | Which OS packages have updates |
 | Once a day, and when you press *Check for updates* | The registries your apps' images come from (such as Docker Hub) | Has an app's image changed? Only the image's fingerprint is compared; nothing is downloaded |

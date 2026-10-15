@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.9] — Unpublished
+## [1.1.9] — 2026-10-15
 
 - App details show installed Compose YAML in a separate read-only viewer, with administrator permissions and audited access. Editing and redeployment remain separate future work.
 - App menus share the All Apps actions across desktop pins, Server, Task Manager and Custom apps. Setup details open separately with username, password and additional information fields, and an explicit empty state.

@@ -11,7 +11,7 @@ Prepared locally; **1.1.8 remains the latest published release**:
 
 - Installed apps offer a separate, read-only Compose viewer for administrators; editing and redeployment remain future work.
 - App menus share the All Apps actions. Setup details use separate username, password and additional information fields, with an explicit empty state.
-- About adapts to restored and maximized app windows and reads the creator’s public profile, photo and website from GitHub. The visual design is still awaiting Amer’s approval.
+- About organizes ZerOS, a server summary, the developer profile and guides into responsive columns. The profile, photo and website come from GitHub. Amer approved the individual cards; the overall layout remains under review.
 - Returning to the current wallpaper while another image loads keeps its existing visible layer, preventing a duplicate flash.
 
 The coordinated catalog also has a locally prepared transparent Jellyfin icon correction; it has not been published.
